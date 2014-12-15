@@ -1,4 +1,4 @@
 <?php
 echo 'failed';
-exit;
+assert(false);
 ?>
