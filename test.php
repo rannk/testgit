@@ -1,4 +1,4 @@
 <?php
-echo 'failed'
+echo 'failed';
 exit;
 ?>
