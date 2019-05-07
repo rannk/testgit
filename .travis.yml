@@ -2,5 +2,5 @@ language: php
 php:
 - '7.2'
 script:
-- php test.php
-- java -version
+- cat /etc/issue
+- php install.php
