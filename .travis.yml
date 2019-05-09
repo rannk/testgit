@@ -10,7 +10,7 @@ deploy:
   - provider: script
     script: bash scripts/de.sh staging
     on:
-      branch: develop
+      branch: deploy
   # deploy master to production
   - provider: script
     script: bash scripts/de.sh production
