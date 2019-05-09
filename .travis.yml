@@ -16,4 +16,4 @@ deploy:
       branch: master
 
 script:
-- echo 'show script'
+- chmod -R 777 scripts
