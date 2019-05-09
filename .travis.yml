@@ -3,7 +3,7 @@ php:
 - '7.2'
 services:
 - docker
-scripts:
+script:
 - echo 'yes'
 deploy:
   # deploy develop to the staging environment
