@@ -1,0 +1,25 @@
+class_name: _SUITEGUY_
+modules:
+    enabled:
+        - WebDriver
+        - SeleniumHelper
+    config:
+        WebDriver:
+            url: '_DEFAULT_URL_'
+            browser: _DEFALUT_BROWSER_
+            capabilities:
+                enableVNC: true
+                pageLoadStrategy: none
+            wait: 0
+            window_size: 1920x1028
+            unexpectedAlertBehaviour: 'accept'
+            host: localhost
+            port: 4444
+
+env:
+    _ENV_:
+         modules:
+            config:
+                WebDriver:
+                    url: '_ENV_URL_'
+                    browser: _ENV_BROWSER_

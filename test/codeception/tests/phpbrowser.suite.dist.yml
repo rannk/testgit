@@ -1,0 +1,12 @@
+class_name: PhpBrowserGuy
+modules:
+    enabled:
+        - PhpBrowser
+        - CurrentUrlHelper
+        - LoginHelper
+    config:
+        PhpBrowser:
+            url: 'http://popsugar.local.onsugar.com'
+            timeout: 600
+        LoginHelper:
+            user_id: 387328

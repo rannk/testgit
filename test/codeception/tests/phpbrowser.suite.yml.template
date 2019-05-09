@@ -1,0 +1,16 @@
+class_name: PhpBrowserGuy
+modules:
+    enabled:
+        - PhpBrowser
+        - CurrentUrlHelper
+        - LoginHelper
+    config:
+        PhpBrowser:
+            url: '_DEFAULT_URL_'
+            timeout: 600
+env:
+    _ENV_:
+         modules:
+            config:
+                PhpBrowser:
+                    url: '_ENV_URL_'

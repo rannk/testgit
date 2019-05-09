@@ -1,0 +1,72 @@
+<html>
+<head>
+    <title>Test results</title>
+    <meta charset='utf-8'>
+    <link type="text/css" rel="stylesheet" href="report.css">
+    <script language="javascript">
+        function showHide(nodeId, linkObj)
+        {
+            var subObj = document.getElementById('stepContainer' + nodeId);
+
+            if (linkObj.innerHTML.indexOf('+')>0) {
+                linkObj.innerHTML = linkObj.innerHTML.replace('+','-');
+                subObj.style.display='';
+                if(nodeId.indexOf("_") > 0) {
+                    subObj.style.display = "block";
+                }
+            } else {
+                linkObj.innerHTML = linkObj.innerHTML.replace('-','+');
+                subObj.style.display='none';
+            }
+        }
+    </script>
+</head>
+<body>
+<div class="layout">
+    <h1>
+        POPSUGAR AutoQA Results<small><span style="color: red">SUCCESS</span> (7 s)</small>
+    </h1>
+    <tr>
+        <td><h3>dev4chromeEnv</h3></td>
+    </tr>
+    <tr>
+        <td><h2>Regression Tests Summary</h2>
+
+            <div id="stepContainerSummary">
+                <table border="0">
+                    <tr>
+                        <td width="250" class="scenarioSuccess">Successful scenarios:</td>
+                        <td class="scenarioSuccessValue"><strong>1 s</strong></td>
+                    </tr>
+                    <tr>
+                        <td class="scenarioFailed">Failed scenarios:</td>
+                        <td class="scenarioFailedValue"><strong>0 s</strong></td>
+                    </tr>
+                    <tr>
+                        <td class="scenarioAll">all the scenarios:</td>
+                        <td class="scenarioAll"><strong>0 s</strong></td>
+                    </tr>
+                </table>
+            </div>
+        </td>
+    </tr>
+    <table border="0" style="width: 100%;">
+                <tr>
+            <td>
+                <p class="scenarioSuccess" onclick="showHide('1', this)">[+] checkVisitingGlowPageCept</p>
+            </td>
+        </tr>
+        <tr>
+            <td><table border="0" width="100%" class="subScenarioTable" id="stepContainer1" style="display: none" >
+                
+        <tr>
+            <td><p class="scenarioSuccess">1. checkVisitingGlowPageCept(7) </p></td>
+        </tr>
+    
+                </table>
+                </td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

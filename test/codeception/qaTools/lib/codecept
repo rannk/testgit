@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+SOURCE="$0"
+while [ -h "$SOURCE"  ]; do
+    DIR="$( cd -P "$( dirname "$SOURCE"  )" && pwd  )"
+    SOURCE="$(readlink "$SOURCE")"
+done
+DIR="$( cd -P "$( dirname "$SOURCE"  )" && pwd  )"
+php "$DIR/codecept.phar" "$@"
