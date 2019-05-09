@@ -1,0 +1,53 @@
+{
+    "chrome": {
+        "default": "66.0",
+        "versions": {
+            "59.0": {
+                "image": "selenoid/vnc:chrome_59.0",
+                "port": "4444",
+                "path": "/"
+            },
+            "67.0": {
+                "image": "selenoid/vnc_chrome:67.0",
+                "port": "4444",
+                "path": "/"
+            },
+            "66.0": {
+                "image": "selenoid/vnc_chrome:66.0",
+                "port": "4444",
+                "path": "/"
+            }
+        }
+    },
+    "firefox": {
+        "default": "46.0",
+        "versions": {
+            "58.0": {
+                "image": "selenoid/vnc:firefox_58.0",
+                "port": "4444",
+                "path": "/wd/hub"
+            },
+            "46.0": {
+                "image": "selenoid/vnc:firefox_46.0",
+                "port": "4444",
+                "path": "/wd/hub"
+            },
+            "54.0": {
+                "image": "selenoid/vnc:firefox_54.0",
+                "port": "4444",
+                "path": "/"
+            }
+        }
+    },
+    "opera": {
+        "default": "47.0",
+        "versions": {
+            "47.0": {
+                "image": "selenoid/opera:latest",
+                "port": "4444",
+                "path": "/",
+                "env": ["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin"]
+            }
+        }
+    }
+}
