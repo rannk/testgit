@@ -8,5 +8,6 @@ script:
 - docker pull selenoid/vnc_chrome:66.0
 - docker run -d  --name selenoid  -p 4444:4444  -v /var/run/docker.sock:/var/run/docker.sock    -v `pwd`/config/:/etc/selenoid/:ro  aerokube/selenoid:latest-release  --conf /etc/selenoid/browsers.json -timeout 70s
 - PATH=$PATH:`pwd`/test/codeception/qaTools/lib
+- chmod -R 777 `pwd`/test/codeception/qaTools/lib
 - codecept -v
 - php test/codeception/qaTools/devQAWrapper.phar -R -e dev4chromeEnv -c ./test/codeception --detail_fail_cases --hostip 127.0.0.1 -p 4 --clear_data --detail_fail_cases -g glow-web --retry 3
