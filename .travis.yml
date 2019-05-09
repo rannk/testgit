@@ -7,4 +7,4 @@ script:
 - docker pull aerokube/selenoid
 - docker pull selenoid/vnc_chrome:66.0
 - docker run -d  --name selenoid  -p 4444:4444  -v /var/run/docker.sock:/var/run/docker.sock    -v `pwd`/config/:/etc/selenoid/:ro  aerokube/selenoid:latest-release  --conf /etc/selenoid/browsers.json -timeout 70s
-- curl -s http://127.0.0.1:4444/ping
+- curl -s http://localhost:4444/ping
