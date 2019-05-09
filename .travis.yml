@@ -8,11 +8,11 @@ script:
 deploy:
   # deploy develop to the staging environment
   - provider: script
-    script: bash scripts/deploy.sh staging
-    only:
+    script: bash scripts/de.sh staging
+    on:
       branch: develop
   # deploy master to production
   - provider: script
-    script: bash scripts/deploy.sh production
-    only:
+    script: bash scripts/de.sh production
+    on:
       branch: master
