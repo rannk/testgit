@@ -24,12 +24,11 @@ $I->seeElement(".teaser"); // the intro section
 $I->seeNumberOfElements(".payment-container .btn", 2); // payment button and add to cart button
 $I->seeNumberOfElements(".item-cell", [1, 150]); // include in this ... (items)
 $I->see("Reviews", ".h4");
-$I->see("Likes", ".h4");
 // check footer
 $I->see("Glow by POPSUGAR", "footer");
 $I->see("Sell on Glow", "footer .legal");
 $I->see("FAQ", "footer .legal");
-$I->see("Contact", "footer .legal");
+$I->see("Customer Service", "footer .legal");
 $I->see("Terms", "footer .legal");
 $I->see("Privacy", "footer .legal");
 $I->seeElement("footer .icon-instagram");

@@ -50,6 +50,6 @@ $I->wait(1);
 $I->click("#pay-button");
 $I->waitForText("Payment successful", 20);
 // check purchased item
-$I->click("View Content", ".checkout-success");
-$I->waitForText("My Library", 20, ".h2");
-$I->seeElement(".my-purchases .pb-4");
+$I->click("View Purchases", ".checkout-success");
+$I->waitForText("My Purchases", 20, ".h2");
+$I->seeElement(".my-purchases .avatar-item");

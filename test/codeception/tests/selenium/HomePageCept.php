@@ -19,7 +19,7 @@ $I->amOnUrl($url);
 // check navgation
 $I->waitForElement(".navbar", 20);
 $I->seeElement(".navbar-brand");
-$I->seeNumberOfElements(".navbar-nav .nav-item", [6, 8]);
+$I->seeNumberOfElements(".navbar-nav .nav-item", [6, 12]);
 $I->seeElement(".navbar-nav .cart");
 $I->seeElement(".navbar #aa-search-input");
 // check carousel
@@ -38,13 +38,12 @@ $I->seeElement("#clear-refinements"); // button
 $I->seeElement("#sort-by"); // sort selection
 // check the first result
 $I->seeElement("#hits .ais-Hits-item:nth-child(1) .avatar-item");
-$I->seeElement("#hits .ais-Hits-item:nth-child(1) .avatar-item .duration");
 $I->seeNumberOfElements("#hits .ais-Hits-item:nth-child(1) .px-sm-2", [3, 4]); // have 3-4 lines under the avatar-item (sponser, title, price, etc)
 // check footer
 $I->see("Glow by POPSUGAR", "footer");
 $I->see("Sell on Glow", "footer .legal");
 $I->see("FAQ", "footer .legal");
-$I->see("Contact", "footer .legal");
+$I->see("Customer Service", "footer .legal");
 $I->see("Terms", "footer .legal");
 $I->see("Privacy", "footer .legal");
 $I->seeElement("footer .icon-instagram");
