@@ -16,9 +16,5 @@ deploy:
     script: bash scripts/de.sh production
     on:
       branch: master
-stages:
-  - name: after_deploy
-      if: branch = develop
-      env: DEVBOX = dev4
 after_deploy:
-  - echo $DEVBOX
+  - echo $TRAVIS_BRANCH
