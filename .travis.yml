@@ -17,4 +17,4 @@ deploy:
     on:
       branch: master
 after_deploy:
-  - echo $TRAVIS_BRANCH
+  - bash scripts/run_test.sh
