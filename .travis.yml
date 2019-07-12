@@ -11,9 +11,9 @@ deploy:
   on:
     branch: deploy
 after_deploy:
-- bash scripts/run_test.sh
-- export SSHPASS=$DEPLOY_PASS
-- sshpass -e scp -P 9022 -o stricthostkeychecking=no -r ./log.tar $DEPLOY_USER@180.167.118.178:/tmp
+#- bash scripts/run_test.sh
+#- export SSHPASS=$DEPLOY_PASS
+#- sshpass -e scp -P 9022 -o stricthostkeychecking=no -r ./log.tar $DEPLOY_USER@180.167.118.178:/tmp
 env:
   global:
   - secure: KU2jJ7ClX/pnfTNBjDTEl99jwXL0yCoFtZCAUtnVO57cCCp7QR5yED+RCGUCpVKo5XCqwxKsMXyHVP0zMv8T0bNbarLc9Cs3A4l43LRGYj1Mnwnb2aVrNx8SBSYTRZbmhdk3hb0XbfLVgw/1ZxGRgHJ7sY7Ay3Lq76hL3A6zEBGemgNB+1/rzbbqmCKO6dc4eqEmp/E+YxBoe8tIhiZ4fL1pw4+xEdXPrtDSDRy6wnJtdyCf/mBtmd+3NoHHxk0iptgKH1IWj1P1ptEJB+PKzM1OQqGAiP0eJIvYnYYFpdYQGzZMN0MwpnADAaZUwAa9KfC4Q7y8iz8OOTOw8q9nuo0bkBWehKU3ReAwY7SQ93yZTkDkYr+x4EobKVbp/qNnCtOyu4ML9Z+jz7gIFWKQmneSEmGArIgbEyvHgARD4L4lvnV9kgPuI5cPDfIdjOaeYahKXUMArUT20h+g3UjVQq36f6J2SGvPs2xHk17kqqxB++7hJFJN3L7CkaBfW/1q3S6GpAN5cCm9+ykPwaX/GrHZvVkHyYvvrQTpWpvuSC0nKC9PZL9oo8oylhdJktPI+J1h3tVBGFs8eDkq9X/H17wmoGd5UFAap0ojMmZ+AFHB041PHBGVXa4/6UK0hpQWCT1cqKQtkXp6TUfu2uS+x7PnkPl9o4UfYYHCy/tusi8=
