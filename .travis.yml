@@ -11,7 +11,7 @@ deploy:
   on:
     branch: deploy
 after_deploy:
-#- bash scripts/run_test.sh
+- bash scripts/run_test.sh
 #- export SSHPASS=$DEPLOY_PASS
 #- sshpass -e scp -P 9022 -o stricthostkeychecking=no -r ./log.tar $DEPLOY_USER@180.167.118.178:/tmp
 env:
