@@ -11,10 +11,11 @@ deploy:
   on:
     branch: deploy
 after_deploy:
-- bash scripts/run_test.sh
+- bash scripts/sc.sh
 #- export SSHPASS=$DEPLOY_PASS
 #- sshpass -e scp -P 9022 -o stricthostkeychecking=no -r ./log.tar $DEPLOY_USER@180.167.118.178:/tmp
 env:
   global:
   - secure: KU2jJ7ClX/pnfTNBjDTEl99jwXL0yCoFtZCAUtnVO57cCCp7QR5yED+RCGUCpVKo5XCqwxKsMXyHVP0zMv8T0bNbarLc9Cs3A4l43LRGYj1Mnwnb2aVrNx8SBSYTRZbmhdk3hb0XbfLVgw/1ZxGRgHJ7sY7Ay3Lq76hL3A6zEBGemgNB+1/rzbbqmCKO6dc4eqEmp/E+YxBoe8tIhiZ4fL1pw4+xEdXPrtDSDRy6wnJtdyCf/mBtmd+3NoHHxk0iptgKH1IWj1P1ptEJB+PKzM1OQqGAiP0eJIvYnYYFpdYQGzZMN0MwpnADAaZUwAa9KfC4Q7y8iz8OOTOw8q9nuo0bkBWehKU3ReAwY7SQ93yZTkDkYr+x4EobKVbp/qNnCtOyu4ML9Z+jz7gIFWKQmneSEmGArIgbEyvHgARD4L4lvnV9kgPuI5cPDfIdjOaeYahKXUMArUT20h+g3UjVQq36f6J2SGvPs2xHk17kqqxB++7hJFJN3L7CkaBfW/1q3S6GpAN5cCm9+ykPwaX/GrHZvVkHyYvvrQTpWpvuSC0nKC9PZL9oo8oylhdJktPI+J1h3tVBGFs8eDkq9X/H17wmoGd5UFAap0ojMmZ+AFHB041PHBGVXa4/6UK0hpQWCT1cqKQtkXp6TUfu2uS+x7PnkPl9o4UfYYHCy/tusi8=
   - secure: wOzQhDfvSn5QQ5jxeAN4gsHDag8/+yi5y2+I/J5QOOVb3kZNXsyeAPXtki+rUC3Bo9EM2OzGn+dVIDZjs32+tOKPxwb8Pp+faysEJ8IzkmkUtXXtwq8IlBKExt/WDzx/bPEM9a3WrRqJf+cMkrQrDjC4fuH7izsReu47SC/fQrHnyXFJ439bQrBgkr/GabTG0P8Y4C0MJotPTuK/z3bVUGPay5mRyqEulV/vMOCKxvkJrL6o5/UzdTTzgaVD5Z2ILG0ojZyyeifR2YFXbVuH3OjaTjI6P7B9uky97O+J94a/alsl8QkED9DbDl3+s3YoxVpsNJvsBWUDUiqaEpGBY7hJLfAKbPo/kWbklSg5lH9ar85l8fnZBQLYCJ/6ljI/N7GjrdKLkEx9vLm/lAmSAM34vIktyZZC4TlSAOZcIGJkCWxu4fhk1qeXJht98y1V/hMqQspXvO5AAK/HhF0VZRcKBHdRSAMttABxoiDAjWhOEIL5k2T2LK1k5DyRaxgy1LLP437bxzoAonFmx1pHGuFz9PIsHWwJl0FItHAsD2sulXQzfi0NlgzJ3F142OdMQf6JxIhxlX2aQxbMDyiTRyWfBX6wi8lg6W4Yy5SdC+kBlSbw6qC4aNPo+Pk6+TpfD/hmwyEilsYFA10RtGot244yRIRf7cQDvjIuCIMjOBg=
+  - REG_TEST_DIR: tests/regression
