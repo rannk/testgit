@@ -1,4 +1,4 @@
 <?php
-print_r( "--" . getenv("REG_TEST_DIR") . "--");
+print_r( "--" . getenv("TEST_ACCOUNT_PASSWORD") . "--");
 echo 'fffff';
 ?>
