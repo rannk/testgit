@@ -12,6 +12,7 @@ deploy:
     branch: deploy
 after_deploy:
 - php scripts/check.php
+- export TEST_ACCOUNT_PASSWORD=$TEST_ACCOUNT_PASSWORD
 - bash scripts/sc.sh
 env:
   global:
