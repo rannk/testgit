@@ -1,2 +1,2 @@
 #!/bin/bash
-php check.php
+php scripts/check.php
