@@ -1,2 +1,2 @@
 <?php
-echo getenv("REG_TEST_DIR");
+echo "--" . getenv("REG_TEST_DIR") . "--";
