@@ -5,6 +5,8 @@ services:
 - docker
 script:
 - sudo apt-get install sshpass
+- echo $TEST1
+- echo $TEST_ACCOUNT_PASSWORD
 deploy:
 - provider: script
   script: bash scripts/de.sh staging
