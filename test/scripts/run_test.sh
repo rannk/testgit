@@ -16,7 +16,7 @@ if [ $TRAVIS_BRANCH = "deploy" ]; then
     sudo mkdir /usr/local/ccparallel
     sudo ln -f -s $TEST_DIR/codeception/qaTools/lib/ccparallel.jar  /usr/local/ccparallel/ccparallel.jar
     chmod -R 777 $TEST_DIR/codeception/qaTools/lib
-    php $TEST_DIR/codeception/qaTools/devQAWrapper.phar -R -e dev4chromeEnv -c $TEST_DIR/codeception --detail_fail_cases --hostip 127.0.0.1 -p 4 --clear_data --detail_fail_cases -g glow-web --retry 2 | tee /tmp/test_result.t
+    php $TEST_DIR/codeception/qaTools/devQAWrapper.phar -R -e dev4chromeEnv -c $TEST_DIR/codeception --detail_fail_cases --hostip 127.0.0.1 -p 4 --clear_data --detail_fail_cases -g $REG_TEST_GROUP --retry 2 | tee /tmp/test_result.t
     cat /tmp/test_result.t | grep "Failed: [^0]"
 fi
 
