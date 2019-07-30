@@ -7,5 +7,6 @@
             TEST_DIR=$REG_TEST_DIR
         else
             TEST_DIR=`pwd`/$REG_TEST_DIR
+        fi
     fi
 echo $TEST_DIR
