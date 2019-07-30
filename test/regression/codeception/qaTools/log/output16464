@@ -1,0 +1,12 @@
+-----------------------------------------------------------
+ POPSUGAR Single Testing 
+ Target: dev4chromeEnv chrome
+-----------------------------------------------------------
+Test Cases Result:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+PASS:    CreateAppCept
+
+Total Tests: 0,Success: 1, Failed: 0
+Time: 30  s.
+Time:0 M. 30 s.
+Successfully finish testing.

@@ -11,13 +11,8 @@ deploy:
   on:
     branch: deploy
 after_deploy:
-- php scripts/check.php
-- echo $TEST_1
-- echo $MY_DIR
-- echo ${TEST1}
-- bash $REG_TEST_DIR/scripts/run_test.sh
+- bash $REG_TEST_DIR/scripts/run_regression.sh
 env:
   global:
-    - REG_TEST_DIR: test
-    - REG_TEST_GROUP: glow-web
-    - secure: EiiGRRuszUwi1G5OjBHe23tN7+qnUBlyE0bwb+eDpFzGbD0OfN3Y/OVs1OiU5As7fkeFntNGftSwVxQWlFaXtr8IaKjnowfEq815c2nhCiN9NHg+LEJBB/00zwdPUvPYg1mZCLTz/Ytbcxb/Hpqz3nhQjX/JGZZqC65B7iMrCmGgrrgUEphfIkm3XElndpQvO8I5btdrNbW/gy5TpnoO+OgL4r47pNv55Q4sRdwB9DnblbeWbeFELaccP1Esg/I+IOtutsJgxh3Wmt4MdzNeh5zv1kSL1c8QavVnEibZ/YlsyYAWvk4uxN+bg0+pneSd7U4S8sYnarjGp3aBndvlBq06i58X6rDW80YrAyTG/4JRWCAiugnLf7lzejwh4/y1RJVijf3sPR8C1qyyjsuie5U84xWOFW1hA5538TGBWeq9RKd1xdzlU3B+y2x8lMCtpaEtuHSCXbGyw9NsiHo/4wDz2dtdzIXlEMUnfN+LjhoNZnVNjyKVP3PktMZ+kdtlEYyeJKbG8IhJVnvA6KvpuG7vmWlLDutArywsi8WB1HXch4//vwYdF3J4OjqzPIcqnjL0hiCLHseKwvt15l6Coxc5GCYUxHCbAMREkCEFYrsdMGDj8dSqHQZuK7sHEuhuxCxf6x0rxlvMgJ3icoTI5GGe3sEoAjVRpqedTpZ3Y/A=
+    - REG_TEST_DIR: test/regression
+    - REG_TEST_GROUP: sparkle-web
