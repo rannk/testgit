@@ -1,5 +1,5 @@
 #!/bin/bash
-if [ $TRAVIS_BRANCH = "development" ]; then
+if [ $TRAVIS_BRANCH = "deploy" ]; then
     if [ ! $REG_TEST_DIR ];then
         TEST_DIR=`pwd`/test
     else
