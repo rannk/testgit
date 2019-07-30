@@ -14,7 +14,7 @@ deploy:
 after_deploy:
 - php scripts/check.php
 - echo $TEST_1
-- echo $TEST1
+- echo $A
 - bash scripts/sc.sh
 env:
   global:
