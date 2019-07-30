@@ -5,17 +5,17 @@ services:
 - docker
 script:
 - sudo apt-get install sshpass
-- echo $TEST1
-- echo $TEST_ACCOUNT_PASSWORD
+- export TEST_1=$TEST1
 deploy:
 - provider: script
   script: bash scripts/de.sh staging
   on:
     branch: deploy
 after_deploy:
+- export TEST_A=$TEST_ACCOUNT_PASSWORD
 - php scripts/check.php
-- echo $TEST1
-- echo $TEST_ACCOUNT_PASSWORD
+- echo $TEST_1
+- echo $TEST_A
 - bash scripts/sc.sh
 env:
   global:
